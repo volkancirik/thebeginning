@@ -1,5 +1,5 @@
 {% load url from future %}
-
+{% load static %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,12 +7,11 @@
 <meta name="description" content="The Beginning, bidi bidi." />
 <meta name="keywords" content="The Beginning, Short, Film, 2012, Baslangic, Yigit, Evgar, Altin Portakal, Cannes,Film, Festival, Corner,Demet Evgar,Bulent Emin Yarar,Oner Erkan" />
 <title>The Beginning</title>
-<style type="text/css">
-
-</style>
-    <script type="text/javascript" src="/img/jquery.js"></script>
-    <script type="text/javascript" src="/img/fade-plugin.js"></script>
-    <link rel="stylesheet" type="text/css" href="/img/thebeginning.css" />
+    {%  block baslik  %}
+    {% endblock %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/fade-plugin.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/thebeginning.css" />
 
     <script type="text/javascript">
 
@@ -37,44 +36,28 @@
 
 <div id="container">
     <div class="header">
-        <iframe src="/img/slide.html" style="border: none; height: 337px;width: 600px;"  align="top" marginheight="0" marginwidth="0" scrolling="no"></iframe>
-{#        <ul id="header_id" class="slide">#}
-{#            <li>#}
-{#                <img src="/img/shot1.png" alt="The Beginning" />#}
-{#            </li>#}
-{#            <li>#}
-{#                <img src="/img/shot2.png" alt="The Beginning" />#}
-{#            </li>#}
-{#            <li>#}
-{#                <img src="/img/shot3.png" alt="The Beginning" />#}
-{#            </li>#}
-{#        </ul>#}
+        <iframe src="{{ STATIC_URL }}html/slide.html" style="border: none; height: 337px;width: 600px;"  align="top" marginheight="0" marginwidth="0" scrolling="no"></iframe>
     </div>
 
-    <div class="menu">
-        <ul>
-            <li><a  href="/synopsis" >Synopsis</a></li>
-            <li><a href="/movie" >Movie</a></li>
-            <li><a href="/Gallery" >Gallery</a></li>
-            <li><a href="/director" >About The Director</a></li>
-            <a class="li-text" href="/contact" >Contact</a>
-        </ul>
+    <div class="menu" align="center">
+        <a href="/synopsis" >Synopsis</a>
+        <a href="/movie" >Movie</a>
+        <a href="/gallery" >Gallery</a>
+        <a href="/director" >About The Director</a>
+        <a style='border: none'href="/contact" >Contact</a>
     </div>
+    <div class="content">
 
-    <div class="main">
-
-        <div class="content">
         {%  block icerik  %}
         {% endblock %}
-        
-        <br class="clearfloat" />
     </div>
+        <br class="clearfloat" />
     
 	<div class="footer">
     Copyright Multi Arts Production 2012
     </div>
-
 </div>
+
 
 </body>
 </html>

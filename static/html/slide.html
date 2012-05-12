@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <script type="text/javascript" src="/static/static/js/jquery.js"></script>
+    <script type="text/javascript" src="/static/static/js/fade-plugin.js"></script>
+    <script type="text/javascript">
+            $(document).ready(
+				function(){
+
+          $("#header_id").fadeTransition({       pauseTime: 4000,
+                                                 transitionTime: 1000,
+                                                 delayStart: 4000,
+                                                 pauseOnMouseOver: false,
+                                                 createNavButtons: false});
+
+
+          var example3 = $("#header_id").fadeTransition().fader();
+          $("#back").click(function(e) { example3.prev(); e.preventDefault(); });
+          $("#next").click(function(e) { example3.next(); e.preventDefault(); });
+        });
+    </script>
+      <style type="text/css">
+    .slide-ul, .slide-ul-li.img-li
+    {
+          clear:both;
+          margin-left: 0;
+          margin-right: 0;
+          margin-top: 0;
+          margin-top: 0;
+          padding: 0 0 0 0;
+          height: 377px; width: 600px;
+          border: none;
+    }
+
+      </style>
+
+</head>
+
+<body>
+<div class="header">
+    <ul id="header_id" class="slide-ul">
+        <li>
+            <img class="img-li" src="/static/static/images/shot1.png" alt="The Beginning" />
+        </li>
+        <li>
+            <img class="img-li" src="/static/static/images/shot2.png" alt="The Beginning" />
+        </li>
+        <li>
+            <img class="img-li" src="/static/static/images/shot3.png" alt="The Beginning" />
+        </li>
+    </ul>
+</div>
+</body>
+</html>
