@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     (r'^img/(?P<path>.*)$', 'django.views.static.serve',{'document_root': MEDIA_ROOT}),
     (r'^synopsis/$', 'thebeginning.app.views.synopsis'),
+    (r'^movie/$', 'thebeginning.app.views.movie'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'thebeginning.app.views.synopsis'), # Should be the last element.
 )
