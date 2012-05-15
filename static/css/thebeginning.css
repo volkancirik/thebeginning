@@ -89,7 +89,7 @@
     float: left;
     font-size: 12px;
     height: 300px;
-    overflow: auto;
+    overflow: hidden;
     /*padding-right: 1px;*/
 
     }
@@ -128,5 +128,32 @@ td {
 text-align: left;
 vertical-align: top;
 }
+
+ /*#gallery {*/
+     /*background-color: #444;*/
+     /*padding: 10px;*/
+     /*width: 580px;*/
+     /*height: 300px;*/
+ /*}*/
+ #gallery ul {
+     list-style: none;
+
+ }
+ #gallery ul li {
+     display: inline;
+ }
+ #gallery img {
+     padding-top: 10px;
+     padding-bottom: 10px;
+     border: 5px solid #fff;
+     border-width: 5px 5px 5px;
+ }
+ #gallery a:hover img {
+     border: 5px solid #3e3e3e;
+     border-width: 5px 5px 5px;
+     color: #fff;
+ }
+ #gallery ul a:hover { color: #fff; }
+
 
 

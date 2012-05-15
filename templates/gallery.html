@@ -8,27 +8,6 @@
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/jquery.lightbox-0.5.css" media="screen" />
 
 
-    <style type="text/css">
- /* jQuery lightBox plugin - Gallery style */
- #gallery {
-     background-color: #444;
-     padding: 10px;
-     width: 520px;
- }
- #gallery ul { list-style: none; }
- #gallery ul li { display: inline; }
- #gallery ul img {
-     border: 5px solid #3e3e3e;
-     border-width: 5px 5px 20px;
- }
- #gallery ul a:hover img {
-     border: 5px solid #fff;
-     border-width: 5px 5px 20px;
-     color: #fff;
- }
- #gallery ul a:hover { color: #fff; }
- </style>
-
     <script type="text/javascript">
 
 jQuery(document).ready(function($) {
@@ -40,21 +19,21 @@ jQuery(document).ready(function($) {
 {% endblock %}
 
 {% block icerik %}
-    <div id="gallery">
-        <ul>
-            <li>
+    <div id="gallery" align="center">
+{#        <ul>#}
+{#            <li>#}
                 <a class="visible" href="{{ STATIC_URL }}images/shot1buyuk.png"><img src="{{ STATIC_URL }}images/shot1.png" width="96" height="54" alt="" /></a>
-            </li>
-            <li>
+{#            </li>#}
+{#            <li>#}
                 <a class='visible' href="{{ STATIC_URL }}images/shot2buyuk.png"><img src="{{ STATIC_URL }}images/shot2.png" width="96" height="54" alt="" /></a>
-            </li>
-            <li>
+{#            </li>#}
+{#            <li>#}
                 <a class='visible' href="{{ STATIC_URL }}images/shot3buyuk.png"><img src="{{ STATIC_URL }}images/shot3.png" width="96" height="54" alt="" /></a>
-            </li>
-            <li>
+{#            </li>#}
+{#            <li>#}
                 <a class='visible' href="{{ STATIC_URL }}images/shot4buyuk.png"><img src="{{ STATIC_URL }}images/shot4.png" width="96" height="54" alt="" /></a>
-            </li>
-        </ul>
+{#            </li>#}
+{#        </ul>#}
     </div>
 
     
