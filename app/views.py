@@ -13,7 +13,8 @@ def movie(request):
    return render_response(request, 'movie.html', {  })
 
 def gallery(request):
-    return render_response(request, 'gallery.html', {  })
+    image_index = [ 1,2,3,4,5,6,7,8,9,10,11,12,13]
+    return render_response(request, 'gallery.html', { 'image_index' : image_index })
 def director(request):
     return render_response(request, 'director.html', {  })
 

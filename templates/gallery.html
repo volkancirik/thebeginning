@@ -20,20 +20,18 @@ jQuery(document).ready(function($) {
 
 {% block icerik %}
     <div id="gallery" align="center">
-{#        <ul>#}
-{#            <li>#}
-                <a class="visible" href="{{ STATIC_URL }}images/shot1buyuk.png"><img src="{{ STATIC_URL }}images/shot1.png" width="96" height="54" alt="" /></a>
-{#            </li>#}
-{#            <li>#}
-                <a class='visible' href="{{ STATIC_URL }}images/shot2buyuk.png"><img src="{{ STATIC_URL }}images/shot2.png" width="96" height="54" alt="" /></a>
-{#            </li>#}
-{#            <li>#}
-                <a class='visible' href="{{ STATIC_URL }}images/shot3buyuk.png"><img src="{{ STATIC_URL }}images/shot3.png" width="96" height="54" alt="" /></a>
-{#            </li>#}
-{#            <li>#}
-                <a class='visible' href="{{ STATIC_URL }}images/shot4buyuk.png"><img src="{{ STATIC_URL }}images/shot4.png" width="96" height="54" alt="" /></a>
-{#            </li>#}
-{#        </ul>#}
+            {% for x in image_index %}
+                 <a class="visible" href="{{ STATIC_URL }}images/{{ x }}.jpg"><img src="{{ STATIC_URL }}images/{{ x }}thumb.jpg" width="96" height="54" alt="" /></a>
+            {% endfor %}
+{#                <a class="visible" href="{{ STATIC_URL }}images/shot1buyuk.png"><img src="{{ STATIC_URL }}images/shot1.png" width="96" height="54" alt="" /></a>#}
+{##}
+{#                <a class='visible' href="{{ STATIC_URL }}images/shot2buyuk.png"><img src="{{ STATIC_URL }}images/shot2.png" width="96" height="54" alt="" /></a>#}
+{##}
+{#                <a class='visible' href="{{ STATIC_URL }}images/shot3buyuk.png"><img src="{{ STATIC_URL }}images/shot3.png" width="96" height="54" alt="" /></a>#}
+{##}
+{#                <a class='visible' href="{{ STATIC_URL }}images/shot4buyuk.png"><img src="{{ STATIC_URL }}images/shot4.png" width="96" height="54" alt="" /></a>#}
+
+
     </div>
 
     
