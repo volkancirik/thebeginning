@@ -18,12 +18,13 @@ urlpatterns = patterns('',
 #    (r'^static/(.*)$', 'django.views.static.serve', {'document_root': '%s' % DOCUMENT_ROOT, 'show_indexes': True}),
     (r'^static/(.*)$', 'django.views.static.serve', {'document_root': STATIC_ROOT}),
 
-    (r'^synopsis/$', 'thebeginning.app.views.synopsis'),
-    (r'^movie/$', 'thebeginning.app.views.movie'),
+    (r'^background/$', 'thebeginning.app.views.background'),
+    (r'^video/$', 'thebeginning.app.views.video'),
     (r'^gallery/$', 'thebeginning.app.views.gallery'),
     (r'^director/$', 'thebeginning.app.views.director'),
+    (r'^castandcrew/$', 'thebeginning.app.views.castandcrew'),
     (r'^contact/$', 'thebeginning.app.views.contact'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'thebeginning.app.views.synopsis'), # Should be the last element.
+    url(r'^$', 'thebeginning.app.views.background'), # Should be the last element.
 
 )

@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block baslik %}
+{% endblock %}
+{% block icerik %}
+    <p align="center" style="padding: 10px;">
+    <h1> The Beginning</h1>
+    {% for aCast in production %}
+        <p align="center">
+            <strong>{{ aCast.baslik }}</strong>
+        </p>
+        <p align="center">
+            {{ aCast.kisi }}
+        </p>
+    {% endfor %}
+    <p align="center">
+            <strong>Cast And Crew</strong>
+    </p>
+    <table width="50%" cellspacing="0" cellpadding="0" border="0" align="center" style="margin-left: 170px;">
+       <tbody>
+            <tr>
+              <td width="50%">Adnan</td>
+              <td>Bulent Emin Yarar</td>
+            </tr>
+            <tr>
+              <td>Duygu</td>
+              <td>Demet Evgar</td>
+            </tr>
+            <tr>
+              <td>Yuksel</td>
+              <td>Oner Erkan</td>
+            </tr>
+            <tr>
+              <td>Elif</td>
+              <td>Ece Cesmioglu</td>
+            </tr>
+            <tr>
+              <td>Mother</td>
+              <td>Bingul Evgar</td>
+            </tr>
+            <tr>
+              <td>Efe</td>
+              <td>Efe Sakiz</td>
+            </tr>
+            <tr>
+              <td>Collection Agent</td>
+              <td>Levent Evgar</td>
+            </tr>
+            <tr>
+              <td>Hospital Lawyer</td>
+              <td>Can Yilmaz</td>
+            </tr>
+            <tr>
+              <td>Child Duygu</td>
+              <td>Aslihan Gencay</td>
+            </tr>
+            <tr>
+              <td>Child Efe </td>
+              <td>Alper Patan</td>
+            </tr>
+            <tr>
+              <td>Mover 1</td>
+              <td>Selahattin Korkmaz</td>
+            </tr>
+            <tr>
+              <td>Mover 2 </td>
+              <td>Sadik Sav</td>
+            </tr>
+          </tbody>
+    </table>
+
+
+    {% for aCast in crew %}
+        <p align="center">
+            <strong>{{ aCast.baslik }}</strong>
+        </p>
+        <p align="center">
+            {{ aCast.kisi }}
+        </p>
+
+    {% endfor %}
+
+
+    </p>
+
+{% endblock %}
